@@ -8,6 +8,7 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-protractor-runner": "^3.2.0",
     "grunt-protractor-webdriver": "^0.2.5",
+    "jasmine-spec-reporter": "^2.5.0",
     "protractor": "^4.0.0"
   }
 }
