@@ -1,6 +1,10 @@
-describe('Angularjs Homepage Todo list', function() {
-    it('should add a todo', function() {
-        browser.get('https://angularjs.org');
+describe('Angularjs Homepage Todo list', function () {
+
+    beforeEach(function () {
+        browser.get(browser.baseUrl);
+    });
+    //if you predefine 'xit' instead of 'it', the test will not be run
+    it('Navigate First Time', function () {
 
         element(by.model('todoList.todoText')).sendKeys('write first protractor test');
         element(by.css('[value="add"]')).click();
@@ -14,8 +18,12 @@ describe('Angularjs Homepage Todo list', function() {
         var completedAmount = element.all(by.css('.done-true'));
         expect(completedAmount.count()).toEqual(2);
     });
-    it('should add a todo', function() {
-       console.log("Hello There, another test");
+    it('Navigate 2nd Time', function () {
+        console.log("In 2nd Time Now");
+
     });
 
+    afterEach(function () {
+        browser.sleep(3000);
+    })
 });

@@ -3,7 +3,7 @@ exports.config = {
         var SpecReporter = require('jasmine-spec-reporter');
         jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
     },
-
+    baseUrl:'https://angularjs.org',
     framework:'jasmine2',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     capabilities: {
@@ -14,7 +14,7 @@ exports.config = {
     }, {
         'browserName': 'chrome'
     }],*/
-    specs: ['tests/todo-spec.js'],
+    specs: ['tests/*.js'],
     jasmineNodeOpts: {
         showColors: true,
         defaultTimeoutInterval: 30000,
